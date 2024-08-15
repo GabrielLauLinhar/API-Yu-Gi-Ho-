@@ -1,38 +1,58 @@
+/* Quis usar as cores preto, roxo e azul por combinar mais com o estilo do anime Yu-Gi-Ho. Então fiz o fundo preto e o as letras,
+ o texto em branco para destacar o fundo */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 20px;
+}
+/*no cabeçalho fiz um roxinho claro pra destacar*/
+h1 {
+  color: #b39ddb;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* A lista de cartas tá no esquema flex, pra distribuir os itens direitinho e deixar o layout alinhado e organizado */
+ul {
+  list-style-type: none;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* O fundo dos itens é um gradiente que vai do cinza escuro (#333333) pro preto (#1e1e1e), criando um efeito de profundidade e . */
+li {
+  border: 2px solid #4a148c; 
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #333333, #1e1e1e); 
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Aqui fiz uma sombra que vai dá um efeito de elevação. É como se os itens estivessem flutuando, quando ele vem pra frente */
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s; /*: Quando você passa o mouse, os itens ganham um efeito de transformação e a sombra aumenta, pra deixar o visual mais dinâmico*/
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*essa transiçaõ é pra quando você passar o mouse em cima de um item, ele dá um zoom e a sombra fica mais intensa, pra destacar ainda mais */
+li:hover {
+  transform: scale(1.05); 
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* As imagens das cartas são ajustadas pra não ultrapassar o limite do item e têm bordas arredondadas pra um toque mais suaveg */
+img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
+p {
+  margin: 5px 0;
+}
+
+
+strong {
+  color: #64b5f6; 
 }
