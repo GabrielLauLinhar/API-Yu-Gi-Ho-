@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react'; /* Estamos importando o React pra criar nosso componente e o Axios pra fazer a requisição pra API. O ./App.css */
-import axios from 'axios';
+import React, { useState, useEffect } from 'react'; 
 import './App.css';
 
-const App = () => { /*Aqui a gente define as váriaveis de estado*/ 
+const App = () => { 
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => { /* faz com que a função fetchCards seja chamada quando o componente é montado.*/
+  useEffect(() => { 
     const fetchCards = async () => {
       try {
         const response = await axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php');
@@ -21,7 +20,7 @@ const App = () => { /*Aqui a gente define as váriaveis de estado*/
     fetchCards();
   }, []);
 
-  return ( /*Aqui comecei o hmtl para organizar tudo */
+  return ( 
     <div className="App">
       <h1>Informações das Cartas de Yu-Gi-Oh!</h1>
       {loading ? (

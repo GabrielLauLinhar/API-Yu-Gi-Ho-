@@ -1,0 +1,6 @@
+O arquivo app.js tem como objetivo pegar os dados da API de YI-GI-HO e mostar em uma pagína web.
+
+algumas das melhoria a serem feitas:
+
+- adicionar comentários, pois como não tem nenhum acaba por demorar mais para entender o código
+- renomear algumas váriaveis. No código existe a váriavel "cards" que é muito genérico
